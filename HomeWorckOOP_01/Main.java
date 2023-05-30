@@ -7,20 +7,19 @@ public class Main {
     public static void main(String[] args) {
 
         CoffeMachine apparat = new CoffeMachine();
-        apparat.addProduct(new Coffe("Alpen gold", 10, "темный",
-                        "с орехом", 100))
-                .addProduct(new Coffe("яблоко", 30))
-                .addProduct(new Coffe("Кола", 15))
-                .addProduct(new Coffe("Российский", 10, "вкусный", 1000));
+        apparat.addDrink(new Drinks("капучино", 70, 0.3))
+                .addDrink(new Drinks("латте", 80, 0.3))
+                .addDrink(new ColdDrinks("минералка", 45, 0.5, "охлажденный"))
+                .addDrink(new ColdDrinks("колла", 60, 0.5, "охлажденный"));
 
         System.out.println(apparat);
-        Product product = apparat.findProduct("яблоко");
-        System.out.println(product);
+        Drinks drink = apparat.findDrink("капучино");
+        System.out.println(drink);
 
         System.out.println("+++++++++++++++++++++");
-        Product saledProduct = apparat.saleProduct("яблоко");
+        Drinks saledProduct = apparat.saleProduct("капучино");
         System.out.println(saledProduct);
-        Product saledProduct2 = apparat.saleProduct("Кола");
+        Drinks saledProduct2 = apparat.saleProduct("Колла");
         System.out.println(saledProduct2);
         System.out.println(apparat);
 

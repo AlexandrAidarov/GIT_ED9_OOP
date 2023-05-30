@@ -11,7 +11,7 @@ public class Product {
 
     @Override
     public String toString() {
-        return String.format("Продукт: %s, Цена: %f", productName, productPrice);
+        return String.format("Напиток: %s, Цена: %f", productName, productPrice);
     }
 
     public String getProductName() {
