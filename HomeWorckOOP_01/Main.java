@@ -13,14 +13,13 @@ public class Main {
                 .addDrink(new ColdDrinks("колла", 60, 0.5, "охлажденный"));
 
         System.out.println(apparat);
-        Drinks drink = apparat.findDrink("капучино");
-        System.out.println(drink);
 
-        System.out.println("+++++++++++++++++++++");
+
+        System.out.println("----------------------");
+        System.out.println("Продажа напитка:");
         Drinks saledProduct = apparat.saleProduct("капучино");
         System.out.println(saledProduct);
-        Drinks saledProduct2 = apparat.saleProduct("Колла");
-        System.out.println(saledProduct2);
+        
         System.out.println(apparat);
 
     }
