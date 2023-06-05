@@ -1,6 +1,6 @@
 package HomeWorckOOP_02;
 
-public abstract class Fish {
+public abstract class Fish implements SpeedAble {
     private String type;
     private String name;
     private double speed;

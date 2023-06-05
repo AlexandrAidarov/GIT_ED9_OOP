@@ -7,16 +7,15 @@ public class Main {
     public static void main(String[] args) {
 
         
-        Pike pike = new Pike ("Pike", "Lion", 9.2 );
-        Piranha piranha = new Piranha("piranha", "Sweety");
-        ClownFish clown = new ClownFish("clownFish", "Nemo");
+        Pike pike = new Pike ("Pike", "Lion", 9.2, "fish");
+        Kambala kambala = new Kambala("Kambala", "Mike", 5.8, "gras");
+        Snail snail = new Snail("Snail", "Ed", 0.2, "Plankton");
 
-        Aqarium aqua = new Aqarium();
-        aqua.addAquaResidents(don).addAquaResidents(leo).addAquaResidents(triton)
-                .addAquaResidents(piranha).addAquaResidents(clown);
+        Aquarium aqua = new Aquarium();
+        aqua.addFish(pike).addFish(kambala).addFish(snail);
 
         System.out.println(aqua);
-        System.out.println("\n *** And now be quiet to listen the sounds оf aquarium: *** ");
+        /*System.out.println("\n *** And now be quiet to listen the sounds оf aquarium: *** ");
         System.out.println(aqua.getAquaSound());
 
 
@@ -39,7 +38,7 @@ public class Main {
         System.out.println(String.format(" Strength of his combo is: %d."
                 , aqua.getSuperChamp(aqua.heroes()).getComboStrength()));
 
+    }*/
+
     }
-}
-    
 }

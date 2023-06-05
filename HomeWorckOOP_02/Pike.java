@@ -7,7 +7,7 @@ public class Pike extends Predators {
     }*/
 
     public Pike(String type, String name, double speed, String feedingType) {
-        super(type, name, speed, feedingType);
+        super(type, name, speed);
         
     }
 

@@ -13,4 +13,6 @@ public class Kambala extends Herbivorous {
         return String.format("Waterfowl: %s", super.toString());
     }
 
+  
+
 }

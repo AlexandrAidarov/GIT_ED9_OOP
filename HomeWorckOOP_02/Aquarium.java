@@ -3,11 +3,11 @@ package HomeWorckOOP_02;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Aqarium {
+public class Aquarium {
     
     private final List<Fish> aquarium = new ArrayList<>();
 
-    public Aqarium addFish(Fish someFish) {
+    public Aquarium addFish(Fish someFish) {
         aquarium.add(someFish);
         return this;
     }
@@ -15,9 +15,24 @@ public class Aqarium {
     @Override
     public String toString() {
         StringBuilder builder = new StringBuilder();
-        builder.append("\n *** Let's look, who is there in our aquarium: *** \n");
+        
         for (Fish fish : aquarium) {
             builder.append(fish).append("\n");
+        }
+        return builder.toString();
+    }
+
+    private List<SpeedAble> getSpeedAble() {
+        List<SpeedAble> result = new ArrayList<>();
+        for (Fish fish : aquarium) {
+            result.add(fish);
+        }
+        return result;
+    }
+    public String getSpeed() {
+        StringBuilder builder = new StringBuilder();
+        for (SpeedAble speedAble : getSpeedAble()) {
+            builder.append(speedAble.speed()).append('\n');
         }
         return builder.toString();
     }

@@ -1,6 +1,6 @@
 package HomeWorckOOP_02;
 
-public abstract class Herbivorous extends Fish {
+public abstract class Herbivorous extends Fish implements SpeedAble {
 
     private String feedingType;
 
