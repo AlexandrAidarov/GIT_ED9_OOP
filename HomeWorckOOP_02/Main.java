@@ -15,6 +15,8 @@ public class Main {
         aqua.addFish(pike).addFish(kambala).addFish(snail);
 
         System.out.println(aqua);
+
+        System.out.println(aqua.getSpeed());
         /*System.out.println("\n *** And now be quiet to listen the sounds оf aquarium: *** ");
         System.out.println(aqua.getAquaSound());
 
