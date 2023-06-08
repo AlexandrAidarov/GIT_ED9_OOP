@@ -13,7 +13,11 @@ public class Main {
         IterableList.add("str4");
         IterableList.add("str5");
      
-
+        System.out.printf("list size: %d\n", listLinked.size());
+        
+        for (String value : listLinked) {
+            System.out.println(value);
+        }
 
 
 

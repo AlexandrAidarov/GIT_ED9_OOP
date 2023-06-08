@@ -5,13 +5,16 @@ import java.util.LinkedList;
 
 public class IterableList<Str> implements Iterable<Str>  {
 
+    
     private int size = 0; 
     private int count = 0; 
     private IterableList<Str> node = null;
     private IterableList<Str> first;
     private IterableList<Str> end;
     LinkedList<Str> elements = new LinkedList<>();
+    private Str element;
 
+    
     public void add(Str elem) {
         
         if (count == 0) {
@@ -23,27 +26,27 @@ public class IterableList<Str> implements Iterable<Str>  {
         count++;
     }
 
-
-
-  
-    public void set(Str value, int index) {
-        isIndexExist(index);
-        IterableList<Str> unit = getUnit(index);
-        unit.elements = value;
+    public void set (Str element){
+        this.element = element;
     }
+    public int size() {
+        return size;
+    }
+  
 
-
-
-
+    public void isIndexExist(int index) throws IndexOutOfBoundsException {
+        if (index < 0 || index >= size) {
+            throw new IndexOutOfBoundsException();
+        }
+    }
 
     @Override
     public Iterator<Str> iterator() {
         return new Iterator<Str>() {
-            //IterableList<Str> elem = first ;
+            
             int index = 0;
             @Override
             public boolean hasNext() {
-                //return elem != null;
                 return index < elements.size();
             }
 
@@ -52,6 +55,6 @@ public class IterableList<Str> implements Iterable<Str>  {
                 return elements.get(index++);
             }
         };
-
+    }
 
 }
