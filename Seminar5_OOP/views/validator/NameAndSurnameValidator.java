@@ -1,6 +1,6 @@
-package Seminar4_OOP.views.validator;
+package Seminar5_OOP.views.validator;
 
-import Seminar4_OOP.model.User;
+import Seminar5_OOP.model.User;
 
 public class NameAndSurnameValidator {
     String userInput;

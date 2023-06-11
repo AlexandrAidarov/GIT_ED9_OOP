@@ -1,4 +1,4 @@
-package Seminar4_OOP.model;
+package Seminar5_OOP.model;
 
 import java.util.ArrayList;
 import java.util.List;

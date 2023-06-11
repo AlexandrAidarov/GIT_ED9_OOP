@@ -1,4 +1,4 @@
-package Seminar4_OOP.views;
+package Seminar5_OOP.views;
 
 public enum Commands {
     NONE,

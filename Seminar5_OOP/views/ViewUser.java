@@ -1,12 +1,12 @@
-package Seminar4_OOP.views;
-
-import Seminar4_OOP.controller.UserController;
-import Seminar4_OOP.model.FileOperationImpl;
-import Seminar4_OOP.model.User;
-import Seminar4_OOP.views.validator.NameAndSurnameValidator;
+package Seminar5_OOP.views;
 
 import java.util.List;
 import java.util.Scanner;
+
+import Seminar5_OOP.controller.UserController;
+import Seminar5_OOP.model.FileOperationImpl;
+import Seminar5_OOP.model.User;
+import Seminar5_OOP.views.validator.NameAndSurnameValidator;
 
 public class ViewUser {
 

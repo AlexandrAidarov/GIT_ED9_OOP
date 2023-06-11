@@ -1,12 +1,12 @@
-package Seminar4_OOP;
+package Seminar5_OOP;
 
 
-import Seminar4_OOP.controller.UserController;
-import Seminar4_OOP.model.FileOperation;
-import Seminar4_OOP.model.FileOperationImpl;
-import Seminar4_OOP.model.Repository;
-import Seminar4_OOP.model.RepositoryFile;
-import Seminar4_OOP.views.ViewUser;
+import Seminar5_OOP.controller.UserController;
+import Seminar5_OOP.model.FileOperation;
+import Seminar5_OOP.model.FileOperationImpl;
+import Seminar5_OOP.model.Repository;
+import Seminar5_OOP.model.RepositoryFile;
+import Seminar5_OOP.views.ViewUser;
 
 public class Main {
     public static void main(String[] args) {

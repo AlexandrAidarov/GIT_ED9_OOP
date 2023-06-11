@@ -1,9 +1,9 @@
-package Seminar4_OOP.controller;
-
-import Seminar4_OOP.model.Repository;
-import Seminar4_OOP.model.User;
+package Seminar5_OOP.controller;
 
 import java.util.List;
+
+import Seminar5_OOP.model.Repository;
+import Seminar5_OOP.model.User;
 
 public class UserController {
     private final Repository repository;

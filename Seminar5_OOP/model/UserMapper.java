@@ -1,4 +1,4 @@
-package Seminar4_OOP.model;
+package Seminar5_OOP.model;
 
 public class UserMapper {
     public String map(User user) {
