@@ -1,19 +1,22 @@
 package Seminar4_OOP.warriors;
 
 
+import Seminar4_OOP.shield.Shields;
 import Seminar4_OOP.weapons.Weapon;
 
 import java.util.Random;
 
-public abstract class Warrior<W extends Weapon> {
+public abstract class Warrior<W extends Weapon> implements Shields {
     private final String name;
     private int healthPoint;
     private W weapon;
+    private Shields shield;
 
-    public Warrior(String name, int healthPoint, W weapon) {
+    public Warrior(String name, int healthPoint, W weapon, Shields shield) {
         this.name = name;
         this.healthPoint = healthPoint;
         this.weapon = weapon;
+        this.shield = shield;
     }
 
     public String getName() {
@@ -41,6 +44,11 @@ public abstract class Warrior<W extends Weapon> {
 
         return rnd.nextInt(0, weapon.damage() + 1);
     }
+    public int hitResistanse() {
+        Random rnd = new Random();
+
+        return rnd.nextInt(0, shield.resistance() + 1);
+    }
 
     public void reduceHealth(int damage) {
         healthPoint -= damage;
@@ -51,6 +59,6 @@ public abstract class Warrior<W extends Weapon> {
 
     @Override
     public String toString() {
-        return String.format("Name: %s, Weapon: %s, HealthPoint: %d", name, weapon, healthPoint);
+        return String.format("Name: %s, Weapon: %s, HealthPoint: %d, Shield: %d", name, weapon, healthPoint, shield);
     }
 }

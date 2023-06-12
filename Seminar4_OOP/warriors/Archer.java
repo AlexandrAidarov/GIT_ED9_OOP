@@ -1,12 +1,14 @@
 package Seminar4_OOP.warriors;
 
 
+import Seminar4_OOP.shield.LightShield;
+import Seminar4_OOP.shield.Shields;
 import Seminar4_OOP.weapons.Weapon;
 import Seminar4_OOP.weapons.rangedWeapon.Ranged;
 
-public class Archer extends Warrior<Ranged>{
-    public Archer(String name, int healthPoint, Ranged weapon) {
-        super(name, healthPoint, weapon);
+public class Archer extends Warrior<Ranged> {
+    public Archer(String name, int healthPoint, Ranged weapon, LightShield shield) {
+        super(name, healthPoint, weapon, shield);
     }
 
     public int distance(){
@@ -17,4 +19,8 @@ public class Archer extends Warrior<Ranged>{
     public String toString() {
         return String.format("Archer: %s, Distance: %d",super.toString(), distance());
     }
+
+
+
+ 
 }
