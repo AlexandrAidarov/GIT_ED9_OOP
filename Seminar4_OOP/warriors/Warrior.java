@@ -31,6 +31,14 @@ public abstract class Warrior<W extends Weapon> implements Shields {
         return weapon;
     }
 
+    public Shields getShield() {
+        return shield;
+    }
+
+    public void setShield(Shields shield) {
+        this.shield = shield;
+    }
+
     public void setHealthPoint(int healthPoint) {
         this.healthPoint = healthPoint;
     }
@@ -59,6 +67,6 @@ public abstract class Warrior<W extends Weapon> implements Shields {
 
     @Override
     public String toString() {
-        return String.format("Name: %s, Weapon: %s, HealthPoint: %d, Shield: %d", name, weapon, healthPoint, shield);
+        return String.format("Name: %s, Weapon: %s, HealthPoint: %d, Shield: %s", name, weapon, healthPoint, shield);
     }
 }
