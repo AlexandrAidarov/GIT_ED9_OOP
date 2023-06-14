@@ -37,6 +37,9 @@ public class ViewUser {
                     case UPDATE:
                         updateUser();
                         break;
+                    case DELETE:
+                        delete();
+                        break;
                 }
             } catch (Exception e) {
                 System.out.println(e.getMessage());
@@ -74,6 +77,11 @@ public class ViewUser {
     private void createUser() throws Exception {
         User user = getNewUser();
         userController.saveUser(user);
+    }
+    
+    private void delete() throws Exception{
+        String userid = prompt("Идентификатор пользователя: ");
+        userController.deleteUser(userid);
     }
 
     private User getNewUser() throws Exception {

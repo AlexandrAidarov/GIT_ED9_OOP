@@ -27,6 +27,24 @@ public class UserController {
         throw new Exception("User not found");
     }
 
+    public void deleteUser(String userId) throws Exception{
+        List<User> users = repository.getAllUsers();
+        User userFind = null;
+        for (User user : users) {
+            if (user.getId().equals(userId)) {
+                userFind = user;
+                break;
+            }
+        }
+
+        if (userFind == null){
+            throw new Exception("User not found");
+        }
+
+        repository.deleteUser(userFind);
+
+    }
+
     public List<User> readAllUsers () {
         return repository.getAllUsers();
     }
