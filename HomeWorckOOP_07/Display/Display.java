@@ -1,51 +1,45 @@
 package HomeWorckOOP_07.Display;
 
-import model.calculator.CanCalculate;
-import model.ComplexNumber;
-import model.calculator.ICanCalculateFactory;
+import HomeWorckOOP_07.Calculator.Calculable;
+import HomeWorckOOP_07.ComplexNumber;
+import HomeWorckOOP_07.Calculator.InterfaceCalculableFactory;
 
 import java.util.Scanner;
 
 public class Display {
     private final Scanner scanner = new Scanner(System.in);
 
-    private final ICanCalculateFactory iCanCalculateFactory;
+    private final InterfaceCalculableFactory InterfaceCalculableFactory;
 
-    public Display(ICanCalculateFactory iCanCalculateFactory) {
-        this.iCanCalculateFactory = iCanCalculateFactory;
+    public Display(InterfaceCalculableFactory InterfaceCalculableFactory) {
+        this.InterfaceCalculableFactory = InterfaceCalculableFactory;
     }
 
     public void run() {
         System.out.println("Калькулятор комплексных чисел.");
-        CanCalculate canCalculate = iCanCalculateFactory.create(getArgument());
+        Calculable calculable = InterfaceCalculableFactory.create(getArgument());
         while (true) {
             System.out.print("Операция (+,*,-,/,=) : ");
             String input = scanner.nextLine().toLowerCase();
             switch (input) {
                 case "+":
-                    canCalculate.sum(getArgument());
+                calculable.sum(getArgument());
                     break;
                 case "*":
-                    canCalculate.multiply(getArgument());
-                    break;
-                case "-":
-                    canCalculate.subtract(getArgument());
-                    break;
-                case "/":
-                    canCalculate.divide(getArgument());
+                calculable.multiply(getArgument());
                     break;
                 case "=":
-                    System.out.println("Результат: " + canCalculate.result());
+                    System.out.println("Результат: " + calculable.result());
                     System.out.print("Продолжить y/n: ");
                     String nextCircle = scanner.nextLine().toLowerCase();
                     if (nextCircle.equals("n")) {
                         return;
                     } else {
-                        canCalculate = iCanCalculateFactory.create(getArgument());
+                        calculable = InterfaceCalculableFactory.create(getArgument());
                     }
                     break;
                 default:
-                    System.out.println(input + " - операция не поддерживается");
+                    System.out.println(input + " - операция не возможна");
             }
         }
     }
@@ -54,7 +48,7 @@ public class Display {
         System.out.print("Введите комплексное число: ");
         String input = scanner.nextLine();
         while (!input.matches("^[\\d]+\\+[\\d]+[i]$")) {
-            System.out.print(input + " - не комплексное число, введите комплексное число: ");
+            System.out.print(input + " - не подходит, введите комплексное число: ");
             input = scanner.nextLine();
         }
         String[] arrayStr = input.split("\\+");

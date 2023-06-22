@@ -1,15 +1,11 @@
 package HomeWorckOOP_07.Calculator;
 
-import model.ComplexNumber;
+import HomeWorckOOP_07.ComplexNumber;
 
-public interface CanCalculate {
+public interface Calculable {
     void sum(ComplexNumber number);
 
     void multiply(ComplexNumber number);
-
-    void subtract(ComplexNumber number);
-
-    void divide(ComplexNumber number);
 
     ComplexNumber result();
 }

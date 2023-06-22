@@ -1,16 +1,16 @@
 package HomeWorckOOP_07;
 
 
-import model.logger.FileLogger;
-import model.logger.LogCanCalculateFactory;
-import model.logger.Logger;
-import views.ConsoleView;
+import HomeWorckOOP_07.Logger.FileLogger;
+import HomeWorckOOP_07.Logger.LogCalculableFactory;
+import HomeWorckOOP_07.Logger.Logger;
+import HomeWorckOOP_07.Display.Display;
 
 public class Main {
     public static void main(String[] args) {
         Logger logger = new FileLogger();
-        LogCanCalculateFactory logCanCalculateFactory = new LogCanCalculateFactory(logger);
-        ConsoleView consoleView = new ConsoleView(logCanCalculateFactory);
-        consoleView.run();
+        LogCalculableFactory logCalculableFactory = new LogCalculableFactory(logger);
+        Display display = new Display(logCalculableFactory);
+        display.run();
     }
 }

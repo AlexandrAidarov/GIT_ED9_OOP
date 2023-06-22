@@ -1,16 +1,17 @@
 package HomeWorckOOP_07.Logger;
 
 
-import model.calculator.Calculator;
-import model.calculator.CanCalculate;
-import model.ComplexNumber;
+import HomeWorckOOP_07.Calculator.Calculator;
+import HomeWorckOOP_07.Calculator.Calculable;
 
-public class LoggerCalculator implements CanCalculate {
+import HomeWorckOOP_07.ComplexNumber;
+
+public class LoggerCalculator implements Calculable {
 
     Calculator calculator;
     Logger logger;
 
-    public LogCalculator(ComplexNumber arg, Logger logger) {
+    public LoggerCalculator(ComplexNumber arg, Logger logger) {
         this.calculator = new Calculator(arg);
         this.logger = logger;
         logger.log("first argument - " + arg + '\n');
@@ -26,17 +27,6 @@ public class LoggerCalculator implements CanCalculate {
     public void multiply(ComplexNumber number) {
         logger.log("multiply " + number + '\n');
         calculator.multiply(number);
-    }
-
-    @Override
-    public void subtract(ComplexNumber number) {
-        logger.log("subtract " + number + '\n');
-        calculator.subtract(number);
-    }
-
-    public void divide(ComplexNumber number) {
-        logger.log("divide " + number + '\n');
-        calculator.divide(number);
     }
 
     @Override
