@@ -16,10 +16,10 @@ public class Display {
     }
 
     public void run() {
-        System.out.println("Калькулятор комплексных чисел.");
+        System.out.println("Калькулятор Комплексных чисел.");
         Calculable calculable = InterfaceCalculableFactory.create(getArgument());
         while (true) {
-            System.out.print("Операция (+,*,-,/,=) : ");
+            System.out.print("Операция ( + , * , = ) : ");
             String input = scanner.nextLine().toLowerCase();
             switch (input) {
                 case "+":
